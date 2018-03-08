@@ -2,15 +2,19 @@
 <html>
 <head>
 	<title>VueJS - Imprimindo valores</title>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
 	<div id="app">
 		<h1>{{ titulo }}</h1>
-		
+		<ul>
+            <!-- <li v-for="item in linguagens">{{item.nome}}</li> -->
+            <li v-for="(item, index) in linguagens"> {{ index }} - {{item.nome}}</li>
+        </ul>
 	</div>
 
-	<script src="https://unpkg.com/vue"></script>
+	
 	<script>
 		var app = new Vue ({
 			el: "#app",            //Elemento
