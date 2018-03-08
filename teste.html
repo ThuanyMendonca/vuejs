@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS - Imprimindo valores</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app">
+		<h1>{{ titulo }}</h1>
+		<div v-if="usuario.nome == 'Thu'">
+            ID: {{ usuario.id }} <br>
+            Nome: {{ usuario.nome }} <br>
+            Profissão: {{ usuario.profissao }}
+        </div>
+        <div v-else>Nenhum usuário !</div>
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script>
+		var app = new Vue ({
+			el: "#app",            //Elemento
+			data: {	
+				titulo: "Aula 02 VueJS",
+                usuario: {
+                    id: 1,
+                    nome: "Thuany",
+                    profissao: "Desenvolvedora"
+                }
+			}
+		});
+	</script>
+</body>
+</html>
