@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VueJS - Diretiva</title>
+    <meta charset="utf-8">
+	<script src="https://unpkg.com/vue"></script>
+	<style media="screen">
+		.red {
+			color: red;
+		}
+		.green {
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1>{{ titulo }}</h1>
+		<img v-bind:src="imagem" v-bind:alt="alt">
+		<p v-bind:class="classHtml">Parágrafo de texto</p>
+    </div>
+    
+	<script>
+		var app = new Vue ({
+			el: "#app",            
+			data: {	
+				titulo: "Aula Diretiva VueJS",
+                imagem: "https://cdn-images-1.medium.com/max/1280/1*wFL3csJ96lQpY0IVT9SE3w.jpeg",
+				alt: "VueJS is awesome !",
+				classHtml: "green",
+			}
+		});
+	</script>
+</body>
+</html>
